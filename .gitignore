@@ -1,0 +1,11 @@
+node_modules/
+.idea
+
+# Appium
+/apps/*
+appium.log
+
+# Allure
+/allure-report/*
+/allure-results/*
+
