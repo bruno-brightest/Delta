@@ -4,6 +4,7 @@ import NavItems from "../screenobjects/NavItems";
 import SettingsScreen from "../screenobjects/SettingsScreen";
 import DeviceLimitScreen from "../screenobjects/DeviceLimitScreen";
 import NewsScreen from "../screenobjects/NewsScreen";
+import OnboardingPage from "../Pages/onboarding-page";
 
 const user = {
   username: "brunobrightest@gmail.com",
@@ -23,39 +24,9 @@ describe("GOLD 4: As a user I want to be able to log in on my existing account (
   });
   // VIA ONBOARDING
 
-  //   it("should load the onboarding screen and click 'Sign In'", async () => {
-  //     await OnboardingScreen.isDisplayed(OnboardingScreen.signInTopRight);
-  //     await OnboardingScreen.tapOnElement(OnboardingScreen.signInTopRight);
-  //   });
-
-  //   it("should be able to click 'Log in with eTORO'", async () => {
-  //     await EToroLoginPage.isDisplayed(EToroLoginPage.loginWitheToro);
-  //     await EToroLoginPage.tapOnElement(EToroLoginPage.loginWitheToro);
-  //   });
-
-  //Dit gaat niet nodig zijn want de pagina herkent gegevens al!!!
-
-  //   it("should load a webview of eToro allowing to login", async () => {
-  //     if (!(await EToroLoginPage.isDisplayed(EToroLoginPage.eToroImage))) {
-  //       driver.pause(5000);
-  //       await EToroLoginPage.tapOnElement(EToroLoginPage.loginWitheToro);
-  //     }
-  //   });
-
-  //   it("should be able to fill in user details", async () => {
-  //     await EToroLoginPage.tapAndSetValue(EToroLoginPage.username, user.username);
-  //     await EToroLoginPage.tapAndSetValue(EToroLoginPage.password, user.password);
-  //   });
-
-  //   it("should be able to click sign in", async () => {
-  //     await EToroLoginPage.tapOnElement(EToroLoginPage.signInButton);
-  //   });
-
-  //   it("should be able to click 'Open Delta'", async () => {
-  //     await EToroLoginPage.isDisplayed(EToroLoginPage.openDeltaButton);
-
-  //     await EToroLoginPage.tapOnElement(EToroLoginPage.openDeltaButton);
-  //   });
+  // it("should load the onboarding screen and be able to sign in with Etoro", async () => {
+  //   await OnboardingPage.onboardingWithEtoro();
+  // });
 
   //   /* Logout other devices */
   //   it("should click 'Logout other devices'", async () => {
@@ -73,23 +44,9 @@ describe("GOLD 4: As a user I want to be able to log in on my existing account (
 
   //VIA HAMBURGERMENU => EERST ONBOARDING SKIPPEN
 
-  it("should open Delta and be able to click 'Let's do this!'", async () => {
-    await OnboardingScreen.isDisplayed(OnboardingScreen.letsDoThisButton);
-    await OnboardingScreen.tapOnElement(OnboardingScreen.letsDoThisButton);
-  });
-
-  it("should click the 'Skip' button on the top right", async () => {
-    await OnboardingScreen.isDisplayed(OnboardingScreen.skipTopRightButton);
-    await OnboardingScreen.tapOnElement(OnboardingScreen.skipTopRightButton);
-  });
-
-  it("should load the confirmation pup-up for skipping the onboarding", async () => {
-    await OnboardingScreen.isDisplayed(OnboardingScreen.skipButtonPopUp);
-  });
-
-  it("should confirm by clicking 'Skip, I'll figure out later'", async () => {
-    await OnboardingScreen.tapOnElement(OnboardingScreen.skipButtonPopUp);
-  });
+  // it("should open Delta and be able to skip the onboarding", async function () {
+  //   await OnboardingPage.skipOnboarding();
+  // });
 
   it("schould open hamburger menu and click on sign in", async () => {
     await NavItems.tapOnElement(NavItems.marketsTab);

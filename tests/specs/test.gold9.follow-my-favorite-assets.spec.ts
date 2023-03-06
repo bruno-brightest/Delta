@@ -3,6 +3,7 @@ import MarketsScreen from "../screenobjects/MarketsScreen";
 import NavItems from "../screenobjects/NavItems";
 import FollowingScreen from "../screenobjects/FollowingScreen";
 import NewsScreen from "../screenobjects/NewsScreen";
+import onboardingPage from "../Pages/onboarding-page";
 
 describe("GOLD 9: As an user I want to follow my favorite assets", () => {
   before(async () => {
@@ -13,56 +14,8 @@ describe("GOLD 9: As an user I want to follow my favorite assets", () => {
     }
   });
 
-  // it('should open Delta and be able to click \'Let\'s button', async () => {
-  //     await OnboardingScreen.isDisplayed(OnboardingScreen.letsDoThisButton);
-  //     await OnboardingScreen.tapOnElement(OnboardingScreen.letsDoThisButton);
-  // });
-
-  // it('should load the YES / NO view', async () => {
-  //     await OnboardingScreen.isDisplayed(OnboardingScreen.noToTrackInvestmentsButton);
-  // });
-
-  // it('should click \'No don\'t track investments\' button', async () => {
-  //     await OnboardingScreen.tapOnElement(OnboardingScreen.noToTrackInvestmentsButton);
-  // });
-
-  // it('should uncheck assets: Crypto, Stocks and NFTs', async () => {
-  //     await OnboardingScreen.tapOnElement(OnboardingScreen.assetPickerNFTs);
-  // });
-
-  // it('should click on the \'Continue\' button', async () => {
-  //     await OnboardingScreen.tapOnElement(OnboardingScreen.assetsContinueBtn);
-  // });
-
-  // it('should wait until the list is loaded', async () => {
-  //     await OnboardingScreen.isDisplayed(OnboardingScreen.followAssetBTC);
-  //     await OnboardingScreen.swipeVertically(20,10);
-  // });
-
-  // it('should check only the assets that are to be followed', async () => {
-  //     await OnboardingScreen.swipeUp();
-  //     await OnboardingScreen.tapOnElement(OnboardingScreen.followAssetAMZN);
-  //     await OnboardingScreen.tapOnElement(OnboardingScreen.followAssetMETA);
-  //     await OnboardingScreen.tapOnElement(OnboardingScreen.followAssetMSFT);
-  //     await OnboardingScreen.sleep(2000);
-  //     await OnboardingScreen.swipeUp();
-  //     await OnboardingScreen.swipeUp();
-  //     await OnboardingScreen.swipeUp();
-  //     await OnboardingScreen.swipeUp();
-  //     await OnboardingScreen.tapOnElement(OnboardingScreen.followAssetSPX);
-  //     await OnboardingScreen.tapOnElement(OnboardingScreen.followAssetDJI);
-  //     await OnboardingScreen.tapOnElement(OnboardingScreen.followAssetNDX);
-
-  // });
-
-  // it('should click on the \'Continue\' button', async () => {
-  //     await OnboardingScreen.isDisplayed(OnboardingScreen.followAssetContinueBtn);
-  //     await OnboardingScreen.tapOnElement(OnboardingScreen.followAssetContinueBtn);
-  // });
-
-  // it('should wait for \'Let\'s explore Delta\' button and click on it', async () => {
-  //     await OnboardingScreen.isDisplayed(OnboardingScreen.finishOnboardingBtn);
-  //     await OnboardingScreen.tapOnElement(OnboardingScreen.finishOnboardingBtn);
+  // it("should open Delta and be able to follow the NO flow", async function () {
+  //   await onboardingPage.onboardingNoFlow();
   // });
 
   it("should click and navigate to the Markets tab", async () => {

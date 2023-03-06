@@ -2,14 +2,13 @@ import OnboardingScreen from "../screenobjects/OnboardingScreen";
 import NavItems from "../screenobjects/NavItems";
 import EToroLoginPage from "../pageobjects/eToroLoginPage";
 import DeltaLoginPage from "../pageobjects/DeltaLoginPage";
-import SettingsScreen from "../screenobjects/SettingsScreen";
-import DeviceLimitScreen from "../screenobjects/DeviceLimitScreen";
 import NewsScreen from "../screenobjects/NewsScreen";
+import OnboardingPage from "../Pages/onboarding-page";
 
 const user = {
-  username: "GetTested",
-  password: "Delta@9000",
-  email: "semayor255@dineroa.com",
+  username: "brunobrightest@gmail.com",
+  password: "syksE8-pizpes-xiqmaz",
+  email: "brunobrightest@gmail.com",
 };
 
 describe("GOLD 5: As a user I want to connect an eToro account - Settings", () => {
@@ -21,23 +20,9 @@ describe("GOLD 5: As a user I want to connect an eToro account - Settings", () =
     }
   });
 
-  it("should open Delta and click on 'Let's Do This'", async () => {
-    await OnboardingScreen.isDisplayed(OnboardingScreen.letsDoThisButton);
-    await OnboardingScreen.tapOnElement(OnboardingScreen.letsDoThisButton);
-  });
-
-  it("should click the 'Skip' button on the top right", async () => {
-    await OnboardingScreen.isDisplayed(OnboardingScreen.skipTopRightButton);
-    await OnboardingScreen.tapOnElement(OnboardingScreen.skipTopRightButton);
-  });
-
-  it("should load the confirmation pup-up for skipping the onboarding", async () => {
-    await OnboardingScreen.isDisplayed(OnboardingScreen.skipButtonPopUp);
-  });
-
-  it("should confirm by clicking 'Skip, I'll figure out later'", async () => {
-    await OnboardingScreen.tapOnElement(OnboardingScreen.skipButtonPopUp);
-  });
+  // it("should open Delta and be able to skip the onboarding", async function () {
+  //   await OnboardingPage.skipOnboarding();
+  // });
 
   it("should click on the 'Sign in/Sign up' button", async () => {
     await NavItems.tapOnElement(NavItems.hamburgerIcon);

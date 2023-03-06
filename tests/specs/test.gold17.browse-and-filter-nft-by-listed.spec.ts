@@ -1,5 +1,6 @@
 import OnboardingScreen from "../screenobjects/OnboardingScreen";
 import MarketsScreen from "../screenobjects/MarketsScreen";
+import OnboardingPage from "../Pages/onboarding-page";
 
 describe("GOLD 17: As a user I want to browse the NFT category  + Filter on listed ", () => {
   before(async () => {
@@ -10,26 +11,8 @@ describe("GOLD 17: As a user I want to browse the NFT category  + Filter on list
     }
   });
 
-  // it('should open Delta and be able to click \'Let\'s do this!\'', async () => {
-  //     if(await OnboardingScreen.isDisplayed(OnboardingScreen.letsDoThisButton)) {
-  //         await OnboardingScreen.tapOnElement(OnboardingScreen.letsDoThisButton);
-  //     }
-  // });
-
-  // it('should click the \'Skip\' button on the top right', async () => {
-  //     if(await OnboardingScreen.isDisplayed(OnboardingScreen.skipTopRightButton)) {
-  //         await OnboardingScreen.tapOnElement(OnboardingScreen.skipTopRightButton);
-  //     }
-  // });
-
-  // it('should load the confirmation pup-up for skipping the onboarding', async () => {
-  //     await OnboardingScreen.isDisplayed(OnboardingScreen.skipButtonPopUp);
-  // })
-
-  // it('should confirm by clicking \'Skip, I\'ll figure out later\'', async () => {
-  //     if(await OnboardingScreen.isDisplayed(OnboardingScreen.skipButtonPopUp)) {
-  //         await OnboardingScreen.tapOnElement(OnboardingScreen.skipButtonPopUp);
-  //     }
+  // it("should open Delta and be able to skip the onboarding", async function () {
+  //   await OnboardingPage.skipOnboarding();
   // });
 
   it("should click and navigate to 'NFTs' tab", async () => {

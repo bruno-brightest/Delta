@@ -1,6 +1,7 @@
 import OnboardingScreen from "../screenobjects/OnboardingScreen";
 import NavItems from "../screenobjects/NavItems";
 import MarketsScreen from "../screenobjects/MarketsScreen";
+import OnboardingPage from "../Pages/onboarding-page";
 
 describe("GOLD 18: As an user I want to be able to sort the different asset types on the market screens", () => {
   before(async () => {
@@ -11,24 +12,9 @@ describe("GOLD 18: As an user I want to be able to sort the different asset type
     }
   });
 
-  // it('should open Delta and be able to click \'Let\'s do this!\'', async () => {
-  //     await OnboardingScreen.isDisplayed(OnboardingScreen.letsDoThisButton);
-  //     await OnboardingScreen.tapOnElement(OnboardingScreen.letsDoThisButton);
+  // it("should open Delta and be able to skip the onboarding", async function () {
+  //   await OnboardingPage.skipOnboarding();
   // });
-
-  // it('should click the \'Skip\' button on the top right', async () => {
-  //     await OnboardingScreen.isDisplayed(OnboardingScreen.skipTopRightButton);
-  //     await OnboardingScreen.tapOnElement(OnboardingScreen.skipTopRightButton);
-  // });
-
-  // it('should load the confirmation pup-up for skipping the onboarding', async () => {
-  //     await OnboardingScreen.isDisplayed(OnboardingScreen.skipButtonPopUp);
-  // })
-
-  // it('should confirm by clicking \'Skip, I\'ll figure out later\'', async () => {
-  //     await OnboardingScreen.tapOnElement(OnboardingScreen.skipButtonPopUp);
-  // });
-
   it("should tap on the Markets tab", async () => {
     await NavItems.isDisplayed(NavItems.marketsTab);
     await NavItems.tapOnElement(NavItems.marketsTab);

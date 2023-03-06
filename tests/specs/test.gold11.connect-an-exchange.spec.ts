@@ -1,5 +1,6 @@
 import SelectorsGold11 from "../ios/screenobjects/locatorsGold11";
 import PortfolioScreen from "../screenobjects/PortfolioScreen";
+import OnboardingPage from "../Pages/onboarding-page";
 
 describe("GOLD 11: As a user I want to connect to exchange account", () => {
   before(async () => {
@@ -10,22 +11,8 @@ describe("GOLD 11: As a user I want to connect to exchange account", () => {
     }
   });
 
-  // it('should open Delta and be able to click \'Let\'s do this!\'', async () => {
-  //     await SelectorsGold11.waitForElement(SelectorsGold11.letsDoThisButton);
-  //     await SelectorsGold11.tapOnElement(SelectorsGold11.letsDoThisButton);
-  // });
-
-  // it('should click the \'Skip\' button on the top right', async () => {
-  //     await SelectorsGold11.waitForElement(SelectorsGold11.skipTopRightButton);
-  //     await SelectorsGold11.tapOnElement(SelectorsGold11.skipTopRightButton);
-  // });
-
-  // it('should load the confirmation pup-up for skipping the onboarding', async () => {
-  //     await SelectorsGold11.waitForElement(SelectorsGold11.skipButtonPopUp);
-  // })
-
-  // it('should confirm by clicking \'Skip, I\'ll figure out later\'', async () => {
-  //     await SelectorsGold11.tapOnElement(SelectorsGold11.skipButtonPopUp);
+  // it("should open Delta and be able to skip the onboarding", async function () {
+  //   await OnboardingPage.skipOnboarding();
   // });
 
   it("should click the third icon: triangle and redirect to the portfolio screen", async () => {

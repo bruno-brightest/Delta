@@ -4,6 +4,7 @@ import SettingsScreen from "../screenobjects/SettingsScreen";
 import MarketsScreen from "../screenobjects/MarketsScreen";
 import ManualConnectionScreen from "../screenobjects/ConnectionScreens/ManualConnectionScreens";
 import PortfolioScreen from "../screenobjects/PortfolioScreen";
+import OnboardingPage from "../Pages/onboarding-page";
 
 describe("GOLD 15: As a user I want to see my purchase/sell history - settings", () => {
   before(async () => {
@@ -14,27 +15,9 @@ describe("GOLD 15: As a user I want to see my purchase/sell history - settings",
     }
   });
 
-  // it('should open Delta and be able to click \'Let\'s do this!\'', async () => {
-  //     await OnboardingScreen.isDisplayed(OnboardingScreen.letsDoThisButton);
-  //     await OnboardingScreen.tapOnElement(OnboardingScreen.letsDoThisButton);
+  // it("should open Delta and be able to skip the onboarding", async function () {
+  //   await OnboardingPage.skipOnboarding();
   // });
-
-  // it('should click the \'Skip\' button on the top right', async () => {
-  //     await OnboardingScreen.isDisplayed(OnboardingScreen.skipTopRightButton);
-  //     await OnboardingScreen.tapOnElement(OnboardingScreen.skipTopRightButton);
-  // });
-
-  // it('should load the confirmation pup-up for skipping the onboarding', async () => {
-  //     await OnboardingScreen.isDisplayed(OnboardingScreen.skipButtonPopUp);
-  // })
-
-  // it('should confirm by clicking \'Skip, I\'ll figure out later\'', async () => {
-  //     await OnboardingScreen.tapOnElement(OnboardingScreen.skipButtonPopUp);
-  // });
-
-  //   it("should wait until the Overview page is loaded", async () => {
-  //     await MarketsScreen.isDisplayed(MarketsScreen.deltaLogo);
-  //   });
   it("should click the third icon: triangle and redirect to the portfolio screen", async () => {
     await NavItems.tapOnElement(NavItems.portfolioTab);
   });

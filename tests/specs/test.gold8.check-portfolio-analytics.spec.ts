@@ -2,35 +2,18 @@ import OnboardingScreen from "../screenobjects/OnboardingScreen";
 import NavItems from "../screenobjects/NavItems";
 import MarketsScreen from "../screenobjects/MarketsScreen";
 import NewsScreen from "../screenobjects/NewsScreen";
-
+import OnboardingPage from "../Pages/onboarding-page";
 describe("GOLD 8: As a user I want to check my portfolio analytics", () => {
-  // before(async () => {
-  //   if (driver.isIOS) {
-  //     OnboardingScreen.setSelector("ios");
-  //   } else {
-  //     OnboardingScreen.setSelector("android");
-  //   }
-  // });
+  before(async () => {
+    if (driver.isIOS) {
+      OnboardingScreen.setSelector("ios");
+    } else {
+      OnboardingScreen.setSelector("android");
+    }
+  });
 
-  //Dit is getest op een Physical device(xiaomi met usb) waardoor deze stappen niet nodig zijn
-  // it("should open Delta and be able to click 'Lets Do This'", async () => {
-  //   if (await OnboardingScreen.isDisplayed(OnboardingScreen.letsDoThisButton)) {
-  //     await OnboardingScreen.tapOnElement(OnboardingScreen.letsDoThisButton);
-  //   }
-  // });
-
-  // it("should skip the onboarding process by tapping 'Skip' button", async () => {
-  //   if (
-  //     await OnboardingScreen.isDisplayed(OnboardingScreen.skipTopRightButton)
-  //   ) {
-  //     await OnboardingScreen.tapOnElement(OnboardingScreen.skipTopRightButton);
-  //   }
-  // });
-
-  // it("should be able to click 'Skip it, I'll figure it out'", async () => {
-  //   if (await OnboardingScreen.isDisplayed(OnboardingScreen.skipButtonPopUp)) {
-  //     await OnboardingScreen.tapOnElement(OnboardingScreen.skipButtonPopUp);
-  //   }
+  // it("should open Delta and be able to skip the onboarding", async function () {
+  //   await OnboardingPage.skipOnboarding();
   // });
 
   it("should wait until the Overview page is loaded", async () => {
