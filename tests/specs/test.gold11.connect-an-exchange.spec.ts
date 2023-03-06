@@ -34,8 +34,14 @@ describe("GOLD 11: As a user I want to connect to exchange account", () => {
 
   /* If device already has an portfolio, change to: addOtherPortfolioBtn*/
   it("should click the + icon to add a new Portfolio", async () => {
-    await SelectorsGold11.waitForElement(PortfolioScreen.addOtherPortfolioBtn);
-    await SelectorsGold11.tapOnElement(PortfolioScreen.addOtherPortfolioBtn);
+    if (
+      await PortfolioScreen.isDisplayed(PortfolioScreen.addOtherPortfolioBtn)
+    ) {
+      await PortfolioScreen.tapOnElement(PortfolioScreen.addOtherPortfolioBtn);
+    } else {
+      await PortfolioScreen.isDisplayed(PortfolioScreen.addFirstPortfolioBtn);
+      await PortfolioScreen.tapOnElement(PortfolioScreen.addFirstPortfolioBtn);
+    }
   });
 
   it("should click on the 'Connect Exchange Account' option", async () => {

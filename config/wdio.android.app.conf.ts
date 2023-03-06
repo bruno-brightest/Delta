@@ -17,8 +17,8 @@ config.capabilities = [
     platformName: "Android",
     maxInstances: 1,
 
-    "appium:deviceName": "samsung SM-A530F",
-    "appium:platformVersion": "9.0",
+    "appium:deviceName": "Xiaomi 2107113SG",
+    "appium:platformVersion": "12.0",
     "appium:orientation": "PORTRAIT",
     "appium:automationName": "UiAutomator2",
     // The path to the app

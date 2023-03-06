@@ -42,8 +42,14 @@ describe("GOLD 12: As a user I want to connect to a broker", () => {
 
   /* If device already has a portfolio; change to addOtherPortfolioBtn*/
   it("should click the + icon to add a new Portfolio", async () => {
-    await PortfolioScreen.isDisplayed(PortfolioScreen.addOtherPortfolioBtn);
-    await PortfolioScreen.tapOnElement(PortfolioScreen.addOtherPortfolioBtn);
+    if (
+      await PortfolioScreen.isDisplayed(PortfolioScreen.addOtherPortfolioBtn)
+    ) {
+      await PortfolioScreen.tapOnElement(PortfolioScreen.addOtherPortfolioBtn);
+    } else {
+      await PortfolioScreen.isDisplayed(PortfolioScreen.addFirstPortfolioBtn);
+      await PortfolioScreen.tapOnElement(PortfolioScreen.addFirstPortfolioBtn);
+    }
   });
 
   it("should click on the 'Connect Broker Account' option", async () => {

@@ -37,8 +37,14 @@ describe("GOLD 16: As a user I want to see my purchase/sell history - specific a
   });
 
   it("should click the + icon to add a new Portfolio", async () => {
-    await PortfolioScreen.isDisplayed(PortfolioScreen.addOtherPortfolioBtn);
-    await PortfolioScreen.tapOnElement(PortfolioScreen.addOtherPortfolioBtn);
+    if (
+      await PortfolioScreen.isDisplayed(PortfolioScreen.addOtherPortfolioBtn)
+    ) {
+      await PortfolioScreen.tapOnElement(PortfolioScreen.addOtherPortfolioBtn);
+    } else {
+      await PortfolioScreen.isDisplayed(PortfolioScreen.addFirstPortfolioBtn);
+      await PortfolioScreen.tapOnElement(PortfolioScreen.addFirstPortfolioBtn);
+    }
   });
 
   it("should click on the 'Add Manual Transaction' option", async () => {

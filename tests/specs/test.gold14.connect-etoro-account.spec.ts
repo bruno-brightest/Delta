@@ -48,8 +48,14 @@ describe("GOLD 14: As a user I want to connect an etoro account", () => {
    * If portfolio exists, use addOtherPortfolioBtn
    */
   it("should click the + icon to add a new Portfolio", async () => {
-    await PortfolioScreen.isDisplayed(PortfolioScreen.addOtherPortfolioBtn);
-    await PortfolioScreen.tapOnElement(PortfolioScreen.addOtherPortfolioBtn);
+    if (
+      await PortfolioScreen.isDisplayed(PortfolioScreen.addOtherPortfolioBtn)
+    ) {
+      await PortfolioScreen.tapOnElement(PortfolioScreen.addOtherPortfolioBtn);
+    } else {
+      await PortfolioScreen.isDisplayed(PortfolioScreen.addFirstPortfolioBtn);
+      await PortfolioScreen.tapOnElement(PortfolioScreen.addFirstPortfolioBtn);
+    }
   });
 
   it("should click on the 'Connect eToro account' option", async () => {

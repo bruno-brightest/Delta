@@ -109,8 +109,14 @@ describe("GOLD 19: As a user I want to be able to manage my portfolio", () => {
    */
 
   it("should click the + icon to add a new Portfolio", async () => {
-    await PortfolioScreen.isDisplayed(PortfolioScreen.addOtherPortfolioBtn);
-    await PortfolioScreen.tapOnElement(PortfolioScreen.addOtherPortfolioBtn);
+    if (
+      await PortfolioScreen.isDisplayed(PortfolioScreen.addOtherPortfolioBtn)
+    ) {
+      await PortfolioScreen.tapOnElement(PortfolioScreen.addOtherPortfolioBtn);
+    } else {
+      await PortfolioScreen.isDisplayed(PortfolioScreen.addFirstPortfolioBtn);
+      await PortfolioScreen.tapOnElement(PortfolioScreen.addFirstPortfolioBtn);
+    }
   });
 
   it("should click on the 'Add Manual Transaction' option", async () => {
@@ -204,8 +210,14 @@ describe("GOLD 19: As a user I want to be able to manage my portfolio", () => {
   });
 
   it("should be able to connect a new portfolio (all options are available)", async () => {
-    await PortfolioScreen.isDisplayed(PortfolioScreen.addOtherPortfolioBtn);
-    await PortfolioScreen.tapOnElement(PortfolioScreen.addOtherPortfolioBtn);
+    if (
+      await PortfolioScreen.isDisplayed(PortfolioScreen.addOtherPortfolioBtn)
+    ) {
+      await PortfolioScreen.tapOnElement(PortfolioScreen.addOtherPortfolioBtn);
+    } else {
+      await PortfolioScreen.isDisplayed(PortfolioScreen.addFirstPortfolioBtn);
+      await PortfolioScreen.tapOnElement(PortfolioScreen.addFirstPortfolioBtn);
+    }
     await PortfolioScreen.isDisplayed(PortfolioScreen.connectExchangeAcc);
     await PortfolioScreen.isDisplayed(PortfolioScreen.connectEToro);
     await PortfolioScreen.isDisplayed(PortfolioScreen.connectManually);
